@@ -1,0 +1,27 @@
+<!-- Developer defined parameters of the enclave -->
+<!-- Please refer to https://download.01.org/intel-sgx/latest/linux-latest/docs/Intel_SGX_Developer_Reference_Linux_2.20_Open_Source.pdf for the explanation of all available fields -->
+<EnclaveConfiguration>
+  <!-- ISV assigned Product ID -->
+  <ProdID>0</ProdID>
+  <!-- ISV assigned SVN -->
+  <!-- SVN: Security version number. Used to version security levels of both hardware and software components of the Intel® Software Guard Extensions framework -->
+  <ISVSVN>0</ISVSVN>
+  <!-- The maximum stack sizeper thread.  Must be 4KB aligned -->
+  <StackMaxSize>0x40000</StackMaxSize>
+  <!-- The maximum heap size for the process. Must be 4KB aligned. -->
+  <HeapMaxSize>0x100000</HeapMaxSize>
+  <!-- The number of TCS. Must be greater than 0 -->
+  <!-- TCS: Thread Control Structure -->
+  <TCSNum>1</TCSNum>
+  <!-- TCS management policy -->
+  <!-- 0: TCS is bound to the untrusted thread -->
+  <!-- 1: TCS is not bound to the untrusted thread -->
+  <TCSPolicy>1</TCSPolicy>
+  <!-- 0: Enclave can be debugged -->
+  <!-- 1: Enclave cannot be debugged -->
+  <DisableDebug>0</DisableDebug>
+  <!-- The desired Extended SSA frame feature -->
+  <MiscSelect>0</MiscSelect>
+  <!-- The mask bits of MiscSelect to enforce -->
+  <MiscMask>0xFFFFFFFF</MiscMask>
+</EnclaveConfiguration>

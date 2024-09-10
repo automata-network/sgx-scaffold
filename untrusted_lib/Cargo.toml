@@ -1,0 +1,10 @@
+[package]
+name = "untrusted_lib"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "untrusted_lib"
+crate-type = ["rlib"]
+
+[dependencies]

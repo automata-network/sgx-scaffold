@@ -1,0 +1,25 @@
+enclave {
+    /* Import the frequently used EDLs */
+    from "sgx_env.edl" import *;
+    from "sgx_stdio.edl" import *;
+    from "sgx_net.edl" import *;
+    from "sgx_fs.edl" import *;
+    from "sgx_thread.edl" import *;
+    from "sgx_process.edl" import *;
+    from "sgx_tstd.edl" import *;
+    from "sgx_cpuid.edl" import *;
+    from "sgx_dcap.edl" import *;
+
+    trusted {
+        /* Define the ECALLs to be called by untrusted */
+
+        public sgx_status_t trusted_execution();
+    }
+
+    untrusted {
+        /* Define the OCALLs to be called by trusted */
+
+        /* void untrusted_execution(i32 random_number); */
+    }
+
+}

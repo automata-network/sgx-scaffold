@@ -1,0 +1,16 @@
+[package]
+name = "enclave"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+# The `tstd_enclave` feature is requested by the automata_sgx_builder
+tstd_enclave = ["automata-sgx-builder/tstd_enclave"]
+
+[lib]
+name = "enclave"
+crate-type = ["staticlib"]
+
+[dependencies]
+automata-sgx-builder = { workspace = true}
+untrusted_lib = { workspace = true }
