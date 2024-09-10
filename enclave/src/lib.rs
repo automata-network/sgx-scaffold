@@ -1,4 +1,5 @@
 use automata_sgx_builder::types::SgxStatus;
+use serde_json::json;
 
 extern "C" {
     fn untrusted_execution(random_number: i32);
@@ -11,6 +12,11 @@ extern "C" {
 #[no_mangle]
 pub unsafe extern "C" fn trusted_execution() -> SgxStatus {
     println!("=============== Trusted execution =================");
+    // Use serde to serialize and deserialize a JSON object
+    let json_object = json!({
+        "sgx": "hello"
+    });
+    println!("Serialized JSON object: {}", json_object);
     // Mock a random number
     let random_number = 4;
     println!("Generated random number: {}", random_number);

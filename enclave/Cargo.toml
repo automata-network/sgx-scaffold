@@ -13,3 +13,5 @@ crate-type = ["staticlib"]
 
 [dependencies]
 automata-sgx-builder = { workspace = true}
+serde = { workspace = true }
+serde_json = { workspace = true }
