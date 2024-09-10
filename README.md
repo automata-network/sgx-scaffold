@@ -28,7 +28,7 @@ When building the enclave, you can use other libraries just like writing a norma
 
 In the case that you must call the library via OCALL, you can refer to the usage of `mock-lib` as an example. Basically, you should add the dependency of that library in `app` crate and declare it as an external crate in `app/src/main.rs` file. Then add the OCALL in `app/sgx/enclave.edl` file. After that, add the function declaration in `enclave/src/lib.rs` file.
 
-Refer to the [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) repo for more details about the verification ofDCAP attestation.
+Refer to the [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) repo for more details about verification of the DCAP attestation.
 
 ## Environment Setup
 
