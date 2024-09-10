@@ -21,9 +21,10 @@ This is a template project for creating an SGX enclave with Rust. It uses the [`
 ## Building the Enclave
 ### Clone the repository
 ```bash
-git clone https://github.com/automata-network/automata-sgx-template.git
-cd automata-sgx-template
+git clone https://github.com/automata-network/sgx-template.git
+cd sgx-template
 ```
+You can click the `Use this template` button to create a new repository.
 
 ### Install cargo-sgx
 ```bash
