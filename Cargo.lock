@@ -15,30 +15,42 @@ dependencies = [
 name = "app-template"
 version = "0.1.0"
 dependencies = [
+ "automata-build-script",
  "automata-sgx-builder",
  "mock-lib",
 ]
 
 [[package]]
+name = "automata-build-script"
+version = "0.1.0"
+source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#502dbdce7357e4dc3d8579eeb8531abf7a833702"
+dependencies = [
+ "cc",
+ "serde",
+ "serde_json",
+ "toml",
+]
+
+[[package]]
 name = "automata-sgx-builder"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#e120d7e159b5d2d2e7f48dcd0819fa66f8fa206c"
+source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#502dbdce7357e4dc3d8579eeb8531abf7a833702"
 dependencies = [
  "automata-sgx-builder-sysroot",
  "cc",
+ "ctor",
  "serde",
  "serde_json",
  "sgx-dcap-ql-rs",
  "sgx_libc",
  "sgx_types",
  "sgx_urts",
- "toml",
 ]
 
 [[package]]
 name = "automata-sgx-builder-sysroot"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#e120d7e159b5d2d2e7f48dcd0819fa66f8fa206c"
+source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#502dbdce7357e4dc3d8579eeb8531abf7a833702"
 
 [[package]]
 name = "bindgen"
@@ -108,6 +120,16 @@ dependencies = [
  "glob",
  "libc",
  "libloading",
+]
+
+[[package]]
+name = "ctor"
+version = "0.2.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "edb49164822f3ee45b17acd4a208cfc1251410cf0cad9a833234c9890774dd9f"
+dependencies = [
+ "quote",
+ "syn",
 ]
 
 [[package]]

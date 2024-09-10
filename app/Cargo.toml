@@ -11,8 +11,8 @@ tstd_app = ["automata-sgx-builder/tstd_app"]
 enclave = { path = "../enclave", config = "sgx/config.xml", edl = "sgx/enclave.edl", lds = "sgx/enclave.lds", key = "sgx/private.pem"}
 
 [dependencies]
-automata-sgx-builder = { workspace = true, features = ["app"] }
+automata-sgx-builder = { workspace = true }
 mock-lib = { workspace = true }
 
 [build-dependencies]
-automata-sgx-builder = { workspace = true, features = ["builder"] }
+automata-build-script = { workspace = true }
