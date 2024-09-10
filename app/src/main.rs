@@ -1,9 +1,10 @@
-
-extern crate untrusted_lib;
+// Declare the mock_lib as an external crate, since it contains OCALL which will be called by the enclave.
+// The automata_sgx_builder will link the `untrusted_execution` OCALL to the mock_lib.
+extern crate mock_lib;
 
 use automata_sgx_builder::types::SgxStatus;
 
-//Micro enclave definition. Used by the automata_sgx_builder.
+//Enclave definition. Used by the automata_sgx_builder.
 automata_sgx_builder::enclave! {
     name: Enclave,
     ecall: {

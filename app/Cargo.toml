@@ -12,7 +12,7 @@ enclave = { path = "../enclave", config = "sgx/config.xml", edl = "sgx/enclave.e
 
 [dependencies]
 automata-sgx-builder = { workspace = true, features = ["app"] }
-untrusted_lib = { workspace = true }
+mock-lib = { workspace = true }
 
 [build-dependencies]
 automata-sgx-builder = { workspace = true, features = ["builder"] }

@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["app", "enclave", "untrusted_lib"]
+members = ["app", "enclave", "mock-lib"]
 
 [workspace.package]
 name = "sgx-template"
@@ -11,7 +11,7 @@ homepage = "https://www.ata.network/"
 
 [workspace.dependencies]
 automata-sgx-builder = { git = "https://github.com/automata-network/automata-sgx-builder", branch = "v2.0.0-nightly-2024-02-01" }
-untrusted_lib = { path = "untrusted_lib" }
+mock-lib = { path = "mock-lib" }
 # Use external libraries in the enclave
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1" }

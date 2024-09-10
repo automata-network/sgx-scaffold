@@ -1,10 +1,10 @@
 [package]
-name = "untrusted_lib"
+name = "mock-lib"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "untrusted_lib"
+name = "mock_lib"
 crate-type = ["rlib"]
 
 [dependencies]

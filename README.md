@@ -14,11 +14,12 @@ This is a template project for creating an SGX enclave with Rust. It uses the [`
 │ └── <a href="./app/build.rs">build.rs</a>: Builder code used to build the application, you don't need change it
 ├── <a href="./enclave/">enclave</a>: The SGX enclave implementation
 │ └── <a href="./enclave/src/lib.rs">lib.rs</a>: Main library file for the enclave implementation
-├── <a href="./untrusted_lib/">untrusted_lib</a>: The untrusted library used by the enclave
-│ └── <a href="./untrusted_lib/src/lib.rs">lib.rs</a>: Main library file for the untrusted library implementation
+├── <a href="./mock-lib/">mock-lib</a>: A mock library which is called by the enclave via OCALL
+│ └── <a href="./mock-lib/src/lib.rs">lib.rs</a>: Main library file for the mock library implementation
 </pre>
 
 ## Building the Enclave
+In order to build the enclave, you need to have a sgx-supported machine.
 ### Clone the repository
 ```bash
 git clone https://github.com/automata-network/sgx-template.git
@@ -36,17 +37,12 @@ cargo sgx --help
 ```
 
 ### Build the Enclave
-#### Build on local machine
+#### Build manually
 ```bash
-cargo sgx build --std
+cargo sgx build
 ```
 or you can run the enclave directly
 ```bash
-cargo sgx run --std
-```
-
-#### Build on sgx-supported machine
-```bash
-cargo sgx build
+cargo sgx run
 ```
 You can find the executable file in `./target/debug` or `./target/release` directory.
