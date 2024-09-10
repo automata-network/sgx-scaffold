@@ -16,12 +16,13 @@ name = "app-template"
 version = "0.1.0"
 dependencies = [
  "automata-sgx-builder",
+ "untrusted_lib",
 ]
 
 [[package]]
 name = "automata-sgx-builder"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=main#7f98bf601157141c1a54c987b868a904595d71ec"
+source = "git+https://github.com/automata-network/automata-sgx-builder?branch=main#b9c7ff9cd4b8bf020bfc612085c6f670d93c3308"
 dependencies = [
  "automata-sgx-builder-sysroot",
  "cc",
@@ -37,7 +38,7 @@ dependencies = [
 [[package]]
 name = "automata-sgx-builder-sysroot"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=main#7f98bf601157141c1a54c987b868a904595d71ec"
+source = "git+https://github.com/automata-network/automata-sgx-builder?branch=main#b9c7ff9cd4b8bf020bfc612085c6f670d93c3308"
 
 [[package]]
 name = "bindgen"
@@ -120,7 +121,6 @@ name = "enclave"
 version = "0.1.0"
 dependencies = [
  "automata-sgx-builder",
- "untrusted_lib",
 ]
 
 [[package]]

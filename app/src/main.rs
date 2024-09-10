@@ -1,3 +1,6 @@
+
+extern crate untrusted_lib;
+
 use automata_sgx_builder::types::SgxStatus;
 
 //Micro enclave definition. Used by the automata_sgx_builder.

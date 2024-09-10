@@ -14,12 +14,12 @@ enclave {
         /* Define the ECALLs to be called by untrusted */
 
         public sgx_status_t trusted_execution();
-    }
+    };
 
     untrusted {
         /* Define the OCALLs to be called by trusted */
 
-        /* void untrusted_execution(i32 random_number); */
-    }
+        void untrusted_execution(int random_number);
+    };
 
-}
+};

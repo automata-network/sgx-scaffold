@@ -1,5 +1,8 @@
 use automata_sgx_builder::types::SgxStatus;
-use untrusted_lib::untrusted_execution;
+
+extern "C" {
+    fn untrusted_execution(random_number: i32);
+}
 
 /**
  * This is an ECALL function defined in the edl file.

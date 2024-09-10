@@ -13,4 +13,3 @@ crate-type = ["staticlib"]
 
 [dependencies]
 automata-sgx-builder = { workspace = true}
-untrusted_lib = { workspace = true }
