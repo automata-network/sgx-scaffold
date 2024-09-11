@@ -23,7 +23,7 @@ dependencies = [
 [[package]]
 name = "automata-build-script"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
 dependencies = [
  "cc",
  "serde",
@@ -34,7 +34,7 @@ dependencies = [
 [[package]]
 name = "automata-sgx-sdk"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
 dependencies = [
  "automata-sgx-sdk-sysroot",
  "cc",
@@ -50,7 +50,7 @@ dependencies = [
 [[package]]
 name = "automata-sgx-sdk-sysroot"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
 
 [[package]]
 name = "bindgen"
