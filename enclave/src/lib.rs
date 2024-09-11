@@ -22,21 +22,25 @@ pub unsafe extern "C" fn trusted_execution() -> SgxStatus {
     // Mock a random number
     let random_number = 4;
     println!("Generated random number: {}", random_number);
-    println!("=============== End of trusted execution =================");
     // Call the untrusted function via OCALL
     untrusted_execution(random_number);
+
+    println!("=============== Back to Trusted execution =================");
     // The following code is used to generate an attestation report
     // Must be run on sgx-supported machine
     let data = [0u8; 64];
     let attestation = automata_sgx_sdk::dcap::dcap_quote(data);
-    match attestation {
+    let result = match attestation {
         Ok(attestation) => {
-            println!("DCAP attestation: {:?}", attestation);
+            println!("DCAP attestation: 0x{}", hex::encode(&attestation));
             SgxStatus::Success
         }
         Err(e) => {
             println!("Generating attestation failed: {:?}", e);
             SgxStatus::Unexpected
         }
-    }
+    };
+    println!("=============== End of trusted execution =================");
+
+    result
 }
