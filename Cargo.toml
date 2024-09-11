@@ -9,8 +9,8 @@ authors = ["Automata Team"]
 homepage = "https://www.ata.network/"
 
 [workspace.dependencies]
-automata-sgx-builder = { git = "https://github.com/automata-network/automata-sgx-builder", branch = "v2.0.0-nightly-2024-02-01" }
-automata-build-script = { git = "https://github.com/automata-network/automata-sgx-builder", branch = "v2.0.0-nightly-2024-02-01" }
+automata-sgx-sdk = { git = "https://github.com/automata-network/automata-sgx-sdk", branch = "v2.0.0-nightly-2024-02-01" }
+automata-build-script = { git = "https://github.com/automata-network/automata-sgx-sdk", branch = "v2.0.0-nightly-2024-02-01" }
 mock-lib = { path = "mock-lib" }
 # Use external libraries in the enclave
 serde = { version = "1", features = ["derive"] }

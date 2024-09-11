@@ -1,8 +1,8 @@
-use automata_sgx_builder::types::SgxStatus;
+use automata_sgx_sdk::types::SgxStatus;
 // For most of the cases, you can use the external library directly.
 use serde_json::json;
 
-// Declare the OCALL function. The automata_sgx_builder will link the OCALL to the mock_lib.
+// Declare the OCALL function. The automata_sgx_sdk will link the OCALL to the mock_lib.
 extern "C" {
     fn untrusted_execution(random_number: i32);
 }
@@ -28,7 +28,7 @@ pub unsafe extern "C" fn trusted_execution() -> SgxStatus {
     // The following code is used to generate an attestation report
     // Must be run on sgx-supported machine
     let data = [0u8; 64];
-    let attestation = automata_sgx_builder::dcap::dcap_quote(data);
+    let attestation = automata_sgx_sdk::dcap::dcap_quote(data);
     match attestation {
         Ok(attestation) => {
             println!("DCAP attestation: {:?}", attestation);

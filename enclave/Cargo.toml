@@ -4,14 +4,14 @@ version = "0.1.0"
 edition = "2021"
 
 [features]
-# The `tstd_enclave` feature is requested by the automata_sgx_builder
-tstd_enclave = ["automata-sgx-builder/tstd_enclave"]
+# The `tstd_enclave` feature is requested by the automata_sgx_sdk
+tstd_enclave = ["automata-sgx-sdk/tstd_enclave"]
 
 [lib]
 name = "enclave"
 crate-type = ["staticlib"]
 
 [dependencies]
-automata-sgx-builder = { workspace = true}
+automata-sgx-sdk = { workspace = true}
 serde = { workspace = true }
 serde_json = { workspace = true }

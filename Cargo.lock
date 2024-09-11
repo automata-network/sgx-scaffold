@@ -16,14 +16,14 @@ name = "app-template"
 version = "0.1.0"
 dependencies = [
  "automata-build-script",
- "automata-sgx-builder",
+ "automata-sgx-sdk",
  "mock-lib",
 ]
 
 [[package]]
 name = "automata-build-script"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#502dbdce7357e4dc3d8579eeb8531abf7a833702"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
 dependencies = [
  "cc",
  "serde",
@@ -32,11 +32,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "automata-sgx-builder"
+name = "automata-sgx-sdk"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#502dbdce7357e4dc3d8579eeb8531abf7a833702"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
 dependencies = [
- "automata-sgx-builder-sysroot",
+ "automata-sgx-sdk-sysroot",
  "cc",
  "ctor",
  "serde",
@@ -48,9 +48,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "automata-sgx-builder-sysroot"
+name = "automata-sgx-sdk-sysroot"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-builder?branch=v2.0.0-nightly-2024-02-01#502dbdce7357e4dc3d8579eeb8531abf7a833702"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#92b3b03af7fbc1dfa6b80887e45c6028df1159c3"
 
 [[package]]
 name = "bindgen"
@@ -142,7 +142,7 @@ checksum = "60b1af1c220855b6ceac025d3f6ecdd2b7c4894bfe9cd9bda4fbb4bc7c0d4cf0"
 name = "enclave"
 version = "0.1.0"
 dependencies = [
- "automata-sgx-builder",
+ "automata-sgx-sdk",
  "serde",
  "serde_json",
 ]
