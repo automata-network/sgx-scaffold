@@ -1,0 +1,17 @@
+services:
+  sgx-template:
+    build:
+      context: ./../../
+      dockerfile: ./docker/22.04/Dockerfile
+
+    image: ghcr.io/automata-network/sgx-template:22.04
+    container_name: sgx-template
+    privileged: true
+    environment:
+      - AZDCAP_BYPASS_BASE_URL=${AZDCAP_BYPASS_BASE_URL:-true}
+      - AZDCAP_DEBUG_LOG_LEVEL=${AZDCAP_DEBUG_LOG_LEVEL:-ERROR1}
+    volumes:
+      - /dev/sgx_provision:/dev/sgx_provision
+      - /dev/sgx:/dev/sgx
+      - /dev/sgx_enclave:/dev/sgx_enclave
+    working_dir: /workspace
