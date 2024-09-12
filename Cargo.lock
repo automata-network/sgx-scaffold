@@ -23,7 +23,7 @@ dependencies = [
 [[package]]
 name = "automata-build-script"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=nightly-2024-02-01#7f4463a9d0b7926855c95ab514e617d11f3a8cd5"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=2.18_nightly-2024-02-01#632935a27863e7b866e8913c6bffa2b0088e3a2c"
 dependencies = [
  "cc",
  "serde",
@@ -34,7 +34,7 @@ dependencies = [
 [[package]]
 name = "automata-sgx-sdk"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=nightly-2024-02-01#7f4463a9d0b7926855c95ab514e617d11f3a8cd5"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=2.18_nightly-2024-02-01#632935a27863e7b866e8913c6bffa2b0088e3a2c"
 dependencies = [
  "automata-sgx-sdk-sysroot",
  "cc",
@@ -50,7 +50,7 @@ dependencies = [
 [[package]]
 name = "automata-sgx-sdk-sysroot"
 version = "0.1.0"
-source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=nightly-2024-02-01#7f4463a9d0b7926855c95ab514e617d11f3a8cd5"
+source = "git+https://github.com/automata-network/automata-sgx-sdk?branch=2.18_nightly-2024-02-01#632935a27863e7b866e8913c6bffa2b0088e3a2c"
 
 [[package]]
 name = "bindgen"
@@ -350,9 +350,9 @@ checksum = "08d43f7aa6b08d49f382cde6a7982047c3426db949b1424bc4b7ec9ae12c6ce2"
 
 [[package]]
 name = "rustix"
-version = "0.38.36"
+version = "0.38.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3f55e80d50763938498dd5ebb18647174e0c76dc38c5505294bb224624f30f36"
+checksum = "8acb788b847c24f28525660c4d7758620a7210875711f79e7f663cc152726811"
 dependencies = [
  "bitflags 2.6.0",
  "errno",
@@ -427,12 +427,12 @@ dependencies = [
 [[package]]
 name = "sgx_build_helper"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 
 [[package]]
 name = "sgx_crypto_sys"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_build_helper",
  "sgx_download_prebuilt",
@@ -442,7 +442,7 @@ dependencies = [
 [[package]]
 name = "sgx_download_prebuilt"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_build_helper",
 ]
@@ -450,7 +450,7 @@ dependencies = [
 [[package]]
 name = "sgx_ffi"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_types",
 ]
@@ -458,7 +458,7 @@ dependencies = [
 [[package]]
 name = "sgx_libc"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_ffi",
  "sgx_oc",
@@ -471,7 +471,7 @@ dependencies = [
 [[package]]
 name = "sgx_oc"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_ffi",
  "sgx_sync",
@@ -482,7 +482,7 @@ dependencies = [
 [[package]]
 name = "sgx_sync"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_trts",
  "sgx_types",
@@ -491,7 +491,7 @@ dependencies = [
 [[package]]
 name = "sgx_tlibc_sys"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_build_helper",
  "sgx_download_prebuilt",
@@ -501,7 +501,7 @@ dependencies = [
 [[package]]
 name = "sgx_trts"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "sgx_crypto_sys",
  "sgx_tlibc_sys",
@@ -511,12 +511,12 @@ dependencies = [
 [[package]]
 name = "sgx_types"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 
 [[package]]
 name = "sgx_uprotected_fs"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "libc",
  "sgx_types",
@@ -525,7 +525,7 @@ dependencies = [
 [[package]]
 name = "sgx_urts"
 version = "2.0.0"
-source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=v2.0.0-nightly-2024-02-01#2e7cd4924402a4c1af199d45b4ea14c57264d5a0"
+source = "git+https://github.com/automata-network/incubator-teaclave-sgx-sdk?branch=2.18_nightly_2024-02-01#bc999a03fc21740a29b32807231b4aea864ff7db"
 dependencies = [
  "libc",
  "sgx_types",

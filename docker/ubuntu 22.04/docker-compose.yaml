@@ -1,10 +1,12 @@
 services:
-  sgx-template:
+  sgx-template-builder:
+    image: ghcr.io/automata-network/sgx-template:ubuntu-22.04_sgx-2.18
     build:
       context: ./../../
-      dockerfile: ./docker/ubuntu 22.04/Dockerfile
+      dockerfile: ./docker/ubuntu 20.04/Dockerfile
 
-    image: ghcr.io/automata-network/sgx-template:22.04
+  sgx-template:
+    image: ghcr.io/automata-network/sgx-template:ubuntu-22.04_sgx-2.18
     container_name: sgx-template
     privileged: true
     environment:
