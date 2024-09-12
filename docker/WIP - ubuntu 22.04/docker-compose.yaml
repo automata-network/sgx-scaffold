@@ -2,7 +2,7 @@ services:
   sgx-template:
     build:
       context: ./../../
-      dockerfile: ./docker/22.04/Dockerfile
+      dockerfile: ./docker/ubuntu 22.04/Dockerfile
 
     image: ghcr.io/automata-network/sgx-template:22.04
     container_name: sgx-template

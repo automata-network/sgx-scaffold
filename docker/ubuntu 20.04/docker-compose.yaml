@@ -3,7 +3,7 @@ services:
     image: ghcr.io/automata-network/sgx-template:20.04
     build:
       context: ./../../
-      dockerfile: ./docker/20.04/Dockerfile
+      dockerfile: ./docker/ubuntu 20.04/Dockerfile
 
   sgx-template:
     image: ghcr.io/automata-network/sgx-template:20.04
