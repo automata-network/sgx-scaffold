@@ -42,8 +42,7 @@ If you have a machine with SGX support, please check the version of your SGX and
 If you don't have a machine with SGX support, we recommend you to create a [`DCsv3`](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcsv3-series?tabs=sizebasic) instance in Azure. You can refer to the [Dockerfile](./docker/) for installing the SGX and DCAP SDK or use docker to build the enclave.
 
 ### Build mannually
-!!! tip
-    You need to have a sgx-supported machine with SGX and DCAP SDK installed to build the enclave manually.
+> You need to have a sgx-supported machine with SGX and DCAP SDK installed to build the enclave manually.
 #### Clone the repository
 ```bash
 git clone https://github.com/automata-network/sgx-template.git
@@ -79,8 +78,7 @@ You can find the executable file in `./target/debug` or `./target/release` direc
 
 ### Build with Docker
 
-!!! tip
-    You need to have a sgx-supported machine to build the enclave with docker. Make sure you got the docker and docker-compose installed.
+> You need to have a sgx-supported machine to build the enclave with docker. Make sure you got the docker and docker-compose installed.
 
 Build image for ubuntu 20.04
 ```bash
