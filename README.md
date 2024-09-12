@@ -104,11 +104,11 @@ We also have the prebuilt docker image in [here](https://github.com/automata-net
 Run image for ubuntu 20.04
 ```bash
 $ cd docker/ubuntu-20.04
-$ docker compose run sgx-template
+$ docker compose run sgx-scaffold
 ```
 
 Run image for ubuntu 22.04
 ```bash
 $ cd docker/ubuntu-22.04
-$ docker compose run sgx-template
+$ docker compose run sgx-scaffold
 ```
