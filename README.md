@@ -30,16 +30,13 @@ In the case that you must call the library via OCALL, you can refer to the usage
 
 Refer to the [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) repo for more details about verification of the DCAP attestation.
 
-## Environment Setup
-
-
 ## Building the Enclave
 ### Prerequisites
 In order to build the enclave, you need to have a sgx-supported machine.
 
 If you have a machine with SGX support, please check the version of your SGX and DCAP SDK. The latest version supported by Automata SGX SDK can be found [here](https://github.com/automata-network/automata-sgx-sdk/tree/main).
 
-If you don't have a machine with SGX support, we recommend you to create a [`DCsv3`](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcsv3-series?tabs=sizebasic) instance in Azure. You can refer to the [Dockerfile](./docker/) for installing the SGX and DCAP SDK or use docker to build the enclave.
+If you don't have a machine with SGX support, we recommend you to create a [`DCsv3`](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcsv3-series?tabs=sizebasic) instance in Azure. You can refer to the [Dockerfile](./docker/) for installing the SGX and DCAP SDK or use docker to build and run the enclave.
 
 ### Build mannually
 > You need to have a sgx-supported machine with SGX and DCAP SDK installed to build the enclave manually.
