@@ -6,8 +6,8 @@
   </picture>
 </div>
 
-# Automata SGX Template
-This is a template project for creating an SGX enclave with Rust. It shows how to build an enclave based on the [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk), which makes it easier for developers to get started with SGX. The project contains the basic guide for the following scenarios:
+# Automata SGX Scaffold
+This is a scaffold for creating an SGX enclave with Rust. It shows how to build an enclave based on the [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk), which makes it easier for developers to get started with SGX. The project contains the basic guide for the following scenarios:
 - Call the code inside the enclave via ECALL
 - Call the code outside the enclave via OCALL
 - Use libraries inside the enclave
@@ -30,11 +30,11 @@ This is a template project for creating an SGX enclave with Rust. It shows how t
 </pre>
 
 ## Your First Enclave
-In order to create your first enclave, you need to modify the `enclave/src/lib.rs` file to add your business logic. Do not forget to update the `app/sgx/enclave.edl` file if you need to update the ECALL interface.
+Following the steps below to create your first enclave.
 
-When building the enclave, you can use other libraries just like writing a normal Rust program. Refer to the usage of `serde_json` in `enclave/src/lib.rs` as an example. 
-
-In the case that you must call the library via OCALL, you can refer to the usage of `mock-lib` as an example. Basically, you should add the dependency of that library in `app` crate and declare it as an external crate in `app/src/main.rs` file. Then add the OCALL in `app/sgx/enclave.edl` file. After that, add the function declaration in `enclave/src/lib.rs` file.
+1. Modify the `enclave/src/lib.rs` file to add your business logic. You can use other libraries just like writing a normal Rust program. Refer to the usage of `serde_json` as an example. 
+2. Update the `app/sgx/enclave.edl` file if you need to change the ECALL interface or add new ECALLs.
+3. Refer to the usage `mock-lib` if you want to use libraries via OCALL. For example, you need to use a library that use instructions not allowed(such as CPUID or GETSEC) in enclave.
 
 Refer to the [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) repo for more details about verification of the DCAP attestation.
 
@@ -44,14 +44,14 @@ In order to build the enclave, you need to have a sgx-supported machine.
 
 If you have a machine with SGX support, please check the version of your SGX and DCAP SDK. The latest version supported by Automata SGX SDK can be found [here](https://github.com/automata-network/automata-sgx-sdk/tree/main).
 
-If you don't have a machine with SGX support, we recommend you to create a [`DCsv3`](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcsv3-series?tabs=sizebasic) instance in Azure. You can refer to the [Dockerfile](./docker/) for installing the SGX and DCAP SDK or use docker to build and run the enclave.
+If you don't have a machine with SGX support, we recommend you to create a [`DCsv3`](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcsv3-series?tabs=sizebasic) instance in Azure. Please refer to the [docker](./docker/) folder for the list of supported systems and create the instance using one of these systems. You can either install the SGX and DCAP SDK manually by following the steps outlined in the Dockerfile, or alternatively, you can use Docker to build and run the enclave directly.
 
 ### Build mannually
 > You need to have a sgx-supported machine with SGX and DCAP SDK installed to build the enclave manually.
 #### Clone the repository
 ```bash
-git clone https://github.com/automata-network/sgx-template.git
-cd sgx-template
+git clone https://github.com/automata-network/sgx-scaffold.git
+cd sgx-scaffold
 ```
 You can click the `Use this template` button to create a new repository.
 
@@ -97,7 +97,7 @@ $ cd docker/ubuntu-22.04
 $ docker compose build
 ```
 
-We also have the prebuilt docker image in [here](https://github.com/automata-network/sgx-template/pkgs/container/sgx-template)
+We also have the prebuilt docker image in [here](https://github.com/automata-network/sgx-scaffold/pkgs/container/sgx-scaffold)
 
 #### Run with Docker
 

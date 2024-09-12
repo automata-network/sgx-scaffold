@@ -1,13 +1,13 @@
 services:
   sgx-template-builder:
-    image: ghcr.io/automata-network/sgx-template:ubuntu-22.04_sgx-2.18.1
+    image: ghcr.io/automata-network/sgx-scaffold:ubuntu-22.04_sgx-2.18.1
     build:
       context: ./../../
       dockerfile: ./docker/ubuntu-20.04/Dockerfile
 
   sgx-template:
-    image: ghcr.io/automata-network/sgx-template:ubuntu-22.04_sgx-2.18.1
-    container_name: sgx-template
+    image: ghcr.io/automata-network/sgx-scaffold:ubuntu-22.04_sgx-2.18.1
+    container_name: sgx-scaffold
     privileged: true
     environment:
       - AZDCAP_BYPASS_BASE_URL=${AZDCAP_BYPASS_BASE_URL:-true}
