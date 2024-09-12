@@ -87,7 +87,13 @@ You can find the executable file in `./target/debug` or `./target/release` direc
 
 Build image for ubuntu 20.04
 ```bash
-$ cd docker/20.04
+$ cd docker/ubuntu-20.04
+$ docker compose build
+```
+
+Build image for ubuntu 22.04
+```bash
+$ cd docker/ubuntu-22.04
 $ docker compose build
 ```
 
@@ -95,7 +101,14 @@ We also have the prebuilt docker image in [here](https://github.com/automata-net
 
 #### Run with Docker
 
+Run image for ubuntu 20.04
 ```bash
-$ cd docker/20.04
+$ cd docker/ubuntu-20.04
+$ docker compose run sgx-template
+```
+
+Run image for ubuntu 22.04
+```bash
+$ cd docker/ubuntu-22.04
 $ docker compose run sgx-template
 ```
