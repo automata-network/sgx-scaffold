@@ -7,7 +7,7 @@
 </div>
 
 # Automata SGX Template
-This is a template project for creating an SGX enclave with Rust. It shows how to build an enclave based on the [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk/tree/main), which makes it easier for developers to get started with SGX. The project contains the basic guide for the following scenarios:
+This is a template project for creating an SGX enclave with Rust. It shows how to build an enclave based on the [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk), which makes it easier for developers to get started with SGX. The project contains the basic guide for the following scenarios:
 - Call the code inside the enclave via ECALL
 - Call the code outside the enclave via OCALL
 - Use libraries inside the enclave
