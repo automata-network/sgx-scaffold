@@ -53,7 +53,14 @@ Once you have installed `cargo-sgx`, you can check the help menu to see the avai
 cargo sgx --help
 ```
 
+#### Generate new signing key
+
+```bash
+cargo sgx gen-key app/sgx/private.pem
+```
+
 #### Build the Enclave
+
 ```bash
 cargo sgx build
 ```
@@ -64,3 +71,20 @@ cargo sgx run
 You can find the executable file in `./target/debug` or `./target/release` directory.
 
 ### Build with Docker
+
+> Make sure you got the docker and docker-compose installed
+
+Build image for ubuntu 20.04
+```bash
+$ cd docker/20.04
+$ docker compose build
+```
+
+We also have the prebuilt docker image in [here](https://github.com/automata-network/sgx-template/pkgs/container/sgx-template)
+
+### Run with Docker
+
+```bash
+$ cd docker/20.04
+$ docker compose run sgx-template
+```
