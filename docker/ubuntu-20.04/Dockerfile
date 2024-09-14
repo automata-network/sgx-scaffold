@@ -1,4 +1,4 @@
-FROM ghcr.io/automata-network/automata-sgx-sdk:v0.1_ubuntu-20.04
+FROM ghcr.io/automata-network/automata-sgx-sdk:v0.2_ubuntu-20.04
 
 WORKDIR /workspace
 
