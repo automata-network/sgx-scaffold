@@ -5,6 +5,7 @@
     <img src="https://raw.githubusercontent.com/automata-network/automata-brand-kit/main/PNG/ATA_White%20Text%20with%20Color%20Logo.png" width="50%">
   </picture>
 </div>
+[![Automata SGX SDK](https://img.shields.io/badge/Power%20By-Automata%20SGX%20SDK-orange.svg)](https://github.com/automata-network/automata-sgx-sdk)
 
 # Automata SGX Scaffold
 This is a scaffold for creating an SGX enclave with Rust. It shows how to build an enclave based on the [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk), which makes it easier for developers to get started with SGX. The project contains the basic guide for the following scenarios:
