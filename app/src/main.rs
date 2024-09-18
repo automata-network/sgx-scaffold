@@ -18,7 +18,9 @@ automata_sgx_sdk::enclave! {
  */
 fn main() {
     println!("=============== Starting the app =================");
-    let result = Enclave::new(true).unwrap().trusted_execution().unwrap();
-    assert!(result.is_success());
+    let result = Enclave::new().trusted_execution().unwrap();
+    if !result.is_success() {
+        println!("{:?}", result);
+    }
     println!("=============== End of the app =================");
 }
