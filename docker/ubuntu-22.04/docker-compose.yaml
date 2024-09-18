@@ -3,7 +3,7 @@ services:
     image: ghcr.io/automata-network/sgx-scaffold:ubuntu-22.04_sgx-2.24
     build:
       context: ./../../
-      dockerfile: ./docker/ubuntu-20.04/Dockerfile
+      dockerfile: ./docker/ubuntu-22.04/Dockerfile
 
   sgx-scaffold:
     image: ghcr.io/automata-network/sgx-scaffold:ubuntu-22.04_sgx-2.24
