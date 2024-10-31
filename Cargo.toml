@@ -16,3 +16,5 @@ mock-lib = { path = "mock-lib" }
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1" }
 hex = "0.4"
+alloy-chains = "=0.1.36"
+
