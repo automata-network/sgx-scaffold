@@ -7,7 +7,7 @@
 </div>
 
 # Automata SGX Scaffold
-[![Automata SGX SDK](https://img.shields.io/badge/Power%20By-Automata%20SGX%20SDK-orange.svg)](https://github.com/automata-network/automata-sgx-sdk)
+[![Automata SGX SDK](https://img.shields.io/badge/Powered%20By-Automata%20SGX%20SDK-orange.svg)](https://github.com/automata-network/automata-sgx-sdk)
 
 This is a scaffold for creating an SGX enclave with Rust. It shows how to build an enclave based on the [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk), which makes it easier for developers to get started with SGX. The project contains the basic guide for the following scenarios:
 - Call the code inside the enclave via ECALL
@@ -48,7 +48,7 @@ If you have a machine with SGX support, please check the version of your SGX and
 
 If you don't have a machine with SGX support, we recommend you to create a [`DCsv3`](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcsv3-series?tabs=sizebasic) instance in Azure. Please refer to the [docker](./docker/) folder for the list of supported systems and create the instance using one of these systems. You can either install the SGX and DCAP SDK manually by following the steps outlined in the Dockerfile, or alternatively, you can use Docker to build and run the enclave directly.
 
-### Build mannually
+### Build manually
 > You need to have a sgx-supported machine with SGX and DCAP SDK installed to build the enclave manually.
 #### Clone the repository
 ```bash
